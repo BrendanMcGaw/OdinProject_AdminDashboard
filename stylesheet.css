@@ -1,3 +1,28 @@
+/* Initial grid container should consist of 2 columns, 2 rows.
+Row 2 and Column 2 should be much larger */
+
 body {
+    margin: 0;
+    padding: 0;
+}
+
+
+#fullBodyContainer {
+    display: grid;
     background-color: black;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 2fr 2fr;
+}
+
+.sidebarContainer {
+    font-size: 24px;
+    color: white;
+    font-weight: bolder;
+    display: grid;
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    background-color: rgb(66, 66, 243);
+    grid-template-rows: repeat(auto, 1fr);
+    row-gap: 1rem;
+    grid-template-columns: 1;
 }
