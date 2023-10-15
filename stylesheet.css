@@ -4,12 +4,12 @@ Row 2 and Column 2 should be much larger */
 body {
     margin: 0;
     padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
 #fullBodyContainer {
     display: grid;
-    background-color: black;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 2fr 2fr;
 }
@@ -44,5 +44,106 @@ body {
 /* Creates the grids for each entry into the sidebar for ease of organisation. */
 .sidebarLink {
     display: grid;
-    grid-template-columns: 1fr 3fr; 
+    grid-template-columns: 1fr 3fr;
+}
+
+.headerContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 100px 100px;
+    /* align-items: center;
+    justify-items: center; */
+}
+
+.searchbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 50px;
+}
+
+/* Just to get the magnifying glass to sit correctly. */
+.searchSymbol {
+    margin-right: 15px;
+}
+
+/* Our alerts, profile and name section, top right. */
+.profileAlerts {
+    display: flex;
+    gap: 35px;
+    grid-column: 3;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+/* Styling for the overall profile handle section giving us more control over the placement of items. */
+.profileHandle {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 100px 450px;
+    grid-template-rows: repeat(2, auto);
+    grid-column: 1/2;
+    grid-row: 2;
+    justify-items: start;
+    align-items: center;
+    margin-left: 50px;
+}
+
+/* Profile image in profile handle section - Under input search bar */
+.handleItem1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+/* Small text saying hi there. */
+.handleItem2 {
+    font-size: 16px;
+    font-weight: bold;
+    align-self: end;
+}
+
+/* Text with @profile link */
+.handleItem3 {
+    align-self: start;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Turns our image into a circle image. */
+.profilePicture {
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+/* Specific properties for the search bar. */
+input {
+    width: 700px;
+    height: 30px;
+    background-color:rgb(233, 233, 233);
+    border-radius: 25px;
+    border: none;
+}
+
+/* Bottom right of header, styling for the buttons to get them to sit right. */
+.postButtons {
+    display: flex;
+    grid-column: 2/4;
+    grid-row: 2;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+/* Button styles to make them look pwitty. */
+button {
+    height: 50px;
+    width: 125px;
+    background-color: rgb(40, 108, 187);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
 }
